@@ -15,7 +15,7 @@ const About = () => {
             <div>
               <img
                 src="https://res.cloudinary.com/dqpxq0ljn/image/upload/v1763642334/techconhub/rtdwykzkn5imdn3jvezn.jpg"
-                alt="Your Photo"
+                alt="Sabnekar Vineel"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>

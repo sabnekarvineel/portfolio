@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Sabnekarvineel' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sabnekar-vineel-33b2942a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },

@@ -23,7 +23,7 @@ const Contact = () => {
     setSubmitMessage('');
 
     try {
-      const response = await axios.post('/api/contact', {
+      await axios.post('/api/contact', {
         ...formData,
         recipientEmail: 'sabnekarvineel862@gmail.com',
       });
