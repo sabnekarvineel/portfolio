@@ -1,0 +1,2 @@
+- [ ] Update Skills.js import from SiAmazonaws to SiAmazonwebservices
+- [ ] Update skills array in Skills.js to use SiAmazonwebservices
