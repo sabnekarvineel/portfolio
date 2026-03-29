@@ -23,13 +23,14 @@ const Contact = () => {
     setSubmitMessage('');
 
     try {
-      await axios.post('/api/contact', {
+      await axios.post(`${process.env.NODE_ENV === 'production' ? 'https://portfolio-c6p0.onrender.com' : ''}/api/contact`, {
         ...formData,
         recipientEmail: 'sabnekarvineel862@gmail.com',
       });
       setSubmitMessage('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Contact form error:', error.response?.data || error.message);
       setSubmitMessage('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -92,7 +93,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-primary-500 focus:outline-none"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
@@ -109,3 +110,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
